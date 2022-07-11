@@ -33,7 +33,6 @@ function handleClick() {
     if (date) {
     // Apply `filter` to the table data to only keep the rows where the `datetime` value matches the filter value
         filteredData = filteredData.filter(row => row.datetime === date);
-
     }
 
     // Rebuild the table using the filtered data
@@ -41,8 +40,8 @@ function handleClick() {
     buildTable(filteredData);
     }
 
-    // Attach an event to listen for the form button
-    d3.selectAll("#filter-btn").on("click", handleClick);
+// Attach an event to listen for the form button
+d3.selectAll("#filter-btn").on("click", handleClick);
 
     // Build the table when the page loads
-    buildTable(tableData);
+buildTable(tableData);
